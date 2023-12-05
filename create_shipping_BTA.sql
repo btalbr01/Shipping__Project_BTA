@@ -1,0 +1,27 @@
+CREATE DATABASE shipping;
+USE shipping;
+CREATE TABLE ships
+(shipName VARCHAR(20) PRIMARY KEY,
+displacement INT(5) NOT NULL,
+capName VARCHAR(30) NOT NULL,
+crew INT(50) NOT NULL,
+portName VARCHAR(20) NOT NULL,
+mfgYear INT(4) NOT NULL
+);
+
+CREATE TABLE ports
+(
+portName VARCHAR(20) PRIMARY KEY,
+city VARCHAR(20) NOT NULL,
+country VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE containers
+(
+containerID INT(10) NOT NULL,
+height INT(4) NOT NULL,
+width INT(4) NOT NULL,
+length INT(4) NOT NULL,
+weight INT(5) NOT NULL,
+shipName VARCHAR(20) PRIMARY KEY
+);
